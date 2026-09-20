@@ -1,0 +1,14 @@
+# Yocto generated files
+/build/
+/downloads/
+/sstate-cache/
+/sdk/
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc

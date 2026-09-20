@@ -1,0 +1,13 @@
+STM32MP1 ADS1263 High-Speed Data Logger
+
+Target:
+  STM32MP157D-DK1
+
+Yocto:
+  Scarthgap
+
+Main image:
+  core-image-full-cmdline
+
+Custom layer:
+  meta-ads1263

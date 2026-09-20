@@ -1,0 +1,62 @@
+#
+# emb-linux-logger Yocto build configuration
+#
+
+MACHINE = "stm32mp1"
+DISTRO ?= "poky"
+
+#
+# Cortex-M4 bare-metal toolchain is not required for this Linux project.
+#
+TOOLCHAIN_HOST_TASK:remove = " \
+    nativesdk-gcc-arm-none-eabi \
+    nativesdk-gcc-arm-none-eabi-staticdev \
+"
+
+#
+# Development and debugging functionality.
+#
+EXTRA_IMAGE_FEATURES = " \
+    debug-tweaks \
+    ssh-server-openssh \
+    tools-debug \
+    package-management \
+"
+
+#
+# Packages required for development, debugging, and ADS1263 testing.
+#
+IMAGE_INSTALL:append = " \
+    spidev-test \
+    libgpiod \
+    libgpiod-tools \
+    python3 \
+    python3-spidev \
+    python3-sqlite3 \
+    sqlite3 \
+    packagegroup-core-buildessential \
+    gdb \
+    gdbserver \
+    strace \
+    openssh \
+    openssh-sftp-server \
+    rsync \
+    curl \
+    wget \
+    iproute2 \
+    iputils \
+    tcpdump \
+    bash \
+    nano \
+    vim \
+    htop \
+    procps \
+    coreutils \
+    util-linux \
+    findutils \
+    grep \
+    sed \
+    gawk \
+"
+
+CONF_VERSION = "2"

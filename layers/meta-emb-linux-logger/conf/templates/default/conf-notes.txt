@@ -1,0 +1,7 @@
+Available project builds:
+
+  bitbake core-image-full-cmdline
+
+SDK:
+
+  bitbake core-image-full-cmdline -c populate_sdk
