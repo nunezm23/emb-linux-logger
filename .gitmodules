@@ -13,3 +13,6 @@
 [submodule "layers/meta-ads1263"]
 	path = layers/meta-ads1263
 	url = git@github.com:nunezm23/meta-ads1263.git
+[submodule "programs/IdS_project"]
+	path = programs/IdS_project
+	url = git@github.com:nunezm23/IdS_project.git
